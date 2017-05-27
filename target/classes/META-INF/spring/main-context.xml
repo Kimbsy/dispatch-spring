@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:int="http://www.springframework.org/schema/integration"
+       xmlns:int-aws="http://www.springframework.org/schema/integration/aws"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/integration http://www.springframework.org/schema/integration/spring-integration.xsd
+       http://www.springframework.org/schema/integration/aws http://www.springframework.org/schema/integration/aws/spring-integration-aws.xsd">
+
+    <!-- Beans -->
+    <bean id="dispatchController" class="com.kimbsy.dispatch.DispatchController"/>
+
+    <!-- Channels -->
+    <int:channel id="sqsInboundChannel" datatype="java.lang.String"/>
+
+    <!-- Endpoints -->
+    <int-aws:sqs-message-driven-channel-adapter id="dispatchSqsInboundChannelAdapter"
+                                                channel="sqsInboundChannel"
+                                                error-channel="errorChannel"
+                                                sqs="sqsClient"
+                                                queues="${dispatch.aws.alexa.sqs.queue.name}"
+                                                auto-startup="true"/>
+
+    <int:service-activator id="testActivator" input-channel="sqsInboundChannel" ref="dispatchController" method="test"/>
+
+</beans>
