@@ -1,2 +1,2 @@
-# alexecute
-Alexa skill for executing commands on a local machine.
+# dispatch
+Spring boot application for relaying messages/commands between machines/applications on a local network.
