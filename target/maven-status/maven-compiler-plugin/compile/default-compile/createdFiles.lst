@@ -1,9 +1,0 @@
-com/kimbsy/dispatch/DispatchController.class
-com/kimbsy/dispatch/executor/SystemOutPrintExecutor.class
-com/kimbsy/dispatch/executor/ExecutorFactory.class
-com/kimbsy/dispatch/request/RequestParser.class
-com/kimbsy/dispatch/executor/ExecutorFactory$1.class
-com/kimbsy/dispatch/request/RequestType.class
-com/kimbsy/dispatch/Application.class
-com/kimbsy/dispatch/request/Request.class
-com/kimbsy/dispatch/executor/Executor.class
