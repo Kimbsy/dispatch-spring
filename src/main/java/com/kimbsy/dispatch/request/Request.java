@@ -3,6 +3,8 @@ package com.kimbsy.dispatch.request;
 import java.util.List;
 
 /**
+ * This class represents a request for a machine to perform an action.
+ *
  * @author kimbsy
  */
 public class Request {
@@ -10,23 +12,49 @@ public class Request {
     private RequestType requestType;
     private List<String> arguments;
 
+    /**
+     * Class constructor specifying the {@link RequestType} and the list of arguments.
+     *
+     * @param requestType The type of request.
+     * @param arguments   List of arguments.
+     */
     public Request(RequestType requestType, List<String> arguments) {
         this.requestType = requestType;
         this.arguments = arguments;
     }
 
+    /**
+     * Get the request type.
+     *
+     * @return The request type.
+     */
     public RequestType getRequestType() {
         return requestType;
     }
 
+    /**
+     * Set the request type.
+     *
+     * @param requestType The request type.
+     */
     public void setRequestType(RequestType requestType) {
         this.requestType = requestType;
     }
 
+    /**
+     * Get the list of arguments.
+     *
+     * @return The list of arguments.
+     */
     public List<String> getArguments() {
         return arguments;
     }
 
+    /**
+     * Set the list of arguments.
+     *
+     * @param arguments The list of arguments.
+     */
     public void setArguments(List<String> arguments) {
         this.arguments = arguments;
     }

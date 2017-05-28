@@ -21,6 +21,6 @@
                                                 queues="${dispatch.aws.alexa.sqs.queue.name}"
                                                 auto-startup="true"/>
 
-    <int:service-activator id="testActivator" input-channel="sqsInboundChannel" ref="dispatchController" method="test"/>
+    <int:service-activator id="testActivator" input-channel="sqsInboundChannel" ref="dispatchController" method="handle"/>
 
 </beans>

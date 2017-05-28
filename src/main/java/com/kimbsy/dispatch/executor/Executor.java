@@ -19,9 +19,9 @@ public interface Executor<T> {
     void setRequest(Request request);
 
     /**
-     * Execute the action with the supplied argument object.
+     * Execute the request.
      *
-     * @return The return value.
+     * @return The return value of the execution.
      */
     T execute();
 }

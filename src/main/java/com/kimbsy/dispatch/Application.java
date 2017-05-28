@@ -10,6 +10,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.ImportResource;
 
 /**
+ * The main Spring Boot application.
+ *
  * @author kimbsy
  */
 @SpringBootApplication
@@ -22,7 +24,7 @@ public class Application {
         SpringApplication.run(Application.class, args);
     }
 
-    @Bean(name="sqsClient")
+    @Bean(name = "sqsClient")
     public AmazonSQSAsync amazonSQSAsyncClient() {
         return AmazonSQSAsyncClientBuilder.standard().withRegion("eu-west-1").build();
     }
