@@ -1,2 +1,2 @@
 # com.kimbsy.dispatch
-Spring boot application for relaying messages/arguments between machines/applications on a local network.
+Spring boot application for relaying messages/commands between machines/applications on a local network.

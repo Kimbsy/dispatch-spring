@@ -2,7 +2,6 @@ package com.kimbsy.dispatch.executor;
 
 import com.kimbsy.dispatch.request.Request;
 import com.kimbsy.dispatch.request.RequestType;
-import org.springframework.messaging.Message;
 
 /**
  * @author kimbsy
@@ -18,6 +17,8 @@ public class ExecutorFactory {
         switch (requestType) {
             case SYSTEM_OUT_PRINT:
                 return new SystemOutPrintExecutor();
+            case WATCH_NEXT:
+                return new WatchNextExecutor();
             default:
                 return null;
         }

@@ -6,4 +6,5 @@ package com.kimbsy.dispatch.request;
 public enum RequestType {
 
     SYSTEM_OUT_PRINT,
+    WATCH_NEXT,
 }

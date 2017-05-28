@@ -1,18 +1,9 @@
 package com.kimbsy.dispatch.executor;
 
-import com.kimbsy.dispatch.request.Request;
-
 /**
  * @author kimbsy
  */
-public class SystemOutPrintExecutor implements Executor<Boolean> {
-
-    Request request;
-
-    @Override
-    public void setRequest(Request request) {
-        this.request = request;
-    }
+public class SystemOutPrintExecutor extends AbstractExecutor<Boolean> {
 
     @Override
     public Boolean execute() {
