@@ -68,7 +68,6 @@ public class WatchNextExecutor extends AbstractExecutor<Boolean> {
 //                System.out.println(s);
 //            }
 
-            System.exit(0);
             return true;
         } catch (IOException e) {
             return false;

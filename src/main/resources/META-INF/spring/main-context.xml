@@ -19,7 +19,11 @@
                                                 error-channel="errorChannel"
                                                 sqs="sqsClient"
                                                 queues="${dispatch.aws.alexa.sqs.queue.name}"
-                                                auto-startup="true"/>
+                                                auto-startup="true"
+                                                max-number-of-messages="10"
+                                                visibility-timeout="200"
+                                                wait-time-out="10"
+                                                send-timeout="30000"/>
 
     <int:service-activator id="testActivator" input-channel="sqsInboundChannel" ref="dispatchController" method="handle"/>
 
