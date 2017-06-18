@@ -14,7 +14,7 @@ public class WatchNextExecutor extends AbstractExecutor<Boolean> {
     /**
      * The available series with the name of their containing directory.
      */
-    public enum Series {
+    public enum Show {
         STAR_TREK("star-trek"),
         ARCHER("archer"),
         RICK_AND_MORTY("rick-and-morty"),
@@ -22,7 +22,7 @@ public class WatchNextExecutor extends AbstractExecutor<Boolean> {
 
         private String dirName;
 
-        Series(String dirName) {
+        Show(String dirName) {
             this.dirName = dirName;
         }
 
@@ -38,14 +38,14 @@ public class WatchNextExecutor extends AbstractExecutor<Boolean> {
     public Boolean execute() {
         Preconditions.checkNotNull(request, "request cannot be null");
 
-        Series series = Series.valueOf(request.getArguments().get(0));
-        Preconditions.checkNotNull(series, "request series cannot be null");
+        Show show = Show.valueOf(request.getArguments().get(0));
+        Preconditions.checkNotNull(show, "request show cannot be null");
 
         try {
             log.info("Executing WATCH_NEXT");
             ProcessBuilder pb = new ProcessBuilder("ssh",
                     "apotheosis",
-                    "watchnext " + series.getDirName(),
+                    "watchnext " + show.getDirName(),
                     "&");
             Process p = pb.start();
 
