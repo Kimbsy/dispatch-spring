@@ -1,6 +1,6 @@
 package com.kimbsy.dispatch.executor;
 
-import com.kimbsy.dispatch.request.Request;
+import com.kimbsy.dispatch.lib.request.Request;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

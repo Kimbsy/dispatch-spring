@@ -2,8 +2,8 @@ package com.kimbsy.dispatch;
 
 import com.kimbsy.dispatch.executor.Executor;
 import com.kimbsy.dispatch.executor.ExecutorFactory;
-import com.kimbsy.dispatch.request.Request;
-import com.kimbsy.dispatch.request.RequestParser;
+import com.kimbsy.dispatch.lib.request.Request;
+import com.kimbsy.dispatch.lib.request.RequestParser;
 import org.springframework.messaging.Message;
 import org.springframework.stereotype.Component;
 

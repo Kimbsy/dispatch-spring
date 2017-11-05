@@ -1,7 +1,7 @@
 package com.kimbsy.dispatch.executor;
 
-import com.kimbsy.dispatch.request.Request;
-import com.kimbsy.dispatch.request.RequestType;
+import com.kimbsy.dispatch.lib.request.Request;
+import com.kimbsy.dispatch.lib.request.RequestType;
 
 /**
  * This class is responsible for instantiating {@link Executor} objects appropriate to a given {@link Request}.

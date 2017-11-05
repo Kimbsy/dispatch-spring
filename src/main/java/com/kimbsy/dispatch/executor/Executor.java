@@ -1,6 +1,6 @@
 package com.kimbsy.dispatch.executor;
 
-import com.kimbsy.dispatch.request.Request;
+import com.kimbsy.dispatch.lib.request.Request;
 
 /**
  * Describes a class capable of executing an action.

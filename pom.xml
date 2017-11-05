@@ -23,6 +23,13 @@
     </parent>
 
     <dependencies>
+        <!-- com.kimbsy Dependencies -->
+        <dependency>
+            <groupId>com.kimbsy</groupId>
+            <artifactId>dispatch.lib</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
         <!-- Spring Boot Modules -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

@@ -1,7 +1,7 @@
 package com.kimbsy.dispatch.executor;
 
-import com.kimbsy.dispatch.request.Request;
-import com.kimbsy.dispatch.request.RequestType;
+import com.kimbsy.dispatch.lib.request.Request;
+import com.kimbsy.dispatch.lib.request.RequestType;
 import org.junit.Test;
 
 import java.util.Collections;
